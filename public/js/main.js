@@ -69,22 +69,38 @@ function inserePlacar() {
   let corpoTabela = $('.placar').find('tbody');
   let usuario = 'Lucas'
   let numPalavras = $('#contador-palavras').text();
-  let botaoRemover = "<a href='#'><i class='small material-icons'>delete</i ></a >"
 
-  let linha =
-    '<tr>' +
-    '<td>' + usuario + '</td>' +
-    '<td>' + numPalavras + '</td>' +
-    '<td>' + botaoRemover + '</td>' +
-    '</tr>';
+  let linha = novaLinha(usuario, numPalavras);
+  linha.find('.botao-remover').click(removelinha);
 
   corpoTabela.prepend(linha);
 }
 
-$('.botao-remover').click(function (event) {
+function novaLinha(usuario, palavras) {
+  let linha = $('<tr>');
+  let colunaUsuario = $('<td>').text(usuario);
+  let colunaPalavras = $('<td>').text(palavras);
+  let colunaRemover = $('<td>');
+
+  let link = $('<a>').attr('href', '#').addClass('botao-remover');
+  let icone = $('<i>').addClass('small').addClass('material-icons').text('delete');
+
+  link.append(icone);
+
+  colunaRemover.append(link);
+
+  linha.append(colunaUsuario);
+  linha.append(colunaPalavras);
+  linha.append(colunaRemover);
+
+  return linha;
+
+}
+
+function removelinha(event) {
   event.preventDefault();
   $(this).parent().parent().remove();
-});
+}
 
 function reiniciaJogo() {
   campo.attr('disabled', false);
