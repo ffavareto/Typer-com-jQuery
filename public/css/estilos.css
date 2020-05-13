@@ -1,5 +1,32 @@
+html {
+  background: rgb(83, 83, 83);
+}
+
+/* width */
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+  background: #4e4d4d;
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+  background: rgb(44, 40, 40);
+  border-radius: 20px;
+
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(21, 20, 24);;
+}
+
 body {
   overflow: scroll;
+  color: aliceblue;
 }
 
 .campo-digitacao {
@@ -44,4 +71,8 @@ body {
 
 #frase-id {
   width: 40px;
+}
+
+#botao-sync {
+  float: right;
 }

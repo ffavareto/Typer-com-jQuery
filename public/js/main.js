@@ -1,12 +1,13 @@
 let tempoInicial = $('#tempo-digitacao').text();
 let campo = $('.campo-digitacao');
 
-$(() => {
+$(function () {
   atualizaTamanhoFrase();
   inicializaContadores();
   inicializaCronometro();
   inicializaMarcadores();
   $('#reiniciar-jogo').click(reiniciaJogo);
+  atualizaPlacar();
 });
 
 function atualizaTempoInicial(tempo) {
