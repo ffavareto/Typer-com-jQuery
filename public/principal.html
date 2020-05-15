@@ -1,21 +1,27 @@
 <!DOCTYPE html>
+
 <html lang='pt-br'>
 
 <head>
+
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
     <title>Typer</title>
-    <link rel='stylesheet' href='./css/estilos.css'>
-    <link rel="stylesheet" href="css/libs/materialize.min.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="./img/Keyboard.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel='stylesheet' href='./css/estilos.css'>
+
 </head>
 
 <body>
     <div class="container">
         <h3 class="center">Typer</h3>
-        <p class='frase center'>Boa noite pessoal do LinkedIn
-        </p>
+        <p class='frase center'>Boa noite pessoal do LinkedIn</p>
 
         <div class="center">
             <img src="img/spinner.gif" alt="Spinner" id="spinner">
@@ -56,6 +62,12 @@
 
             <input type="number" id="frase-id" min="0">
 
+            <div class="select-usuarios">
+                <select id="usuarios">
+                    <option value="Lucas">Lucas</option>
+                </select>
+            </div>
+
             <a id="botao-sync" class="btn-floating btn-large waves-effect waves-light cyan">
                 <i class="material-icons">swap_vert</i>
             </a>
@@ -95,6 +107,6 @@
     <script src='js/main.js'></script>
     <script src="js/placar.js"></script>
     <script src="js/frase.js"></script>
-</body>
+    <script src="js/selectize.js"></script>
 
 </html>
