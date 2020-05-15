@@ -6,7 +6,7 @@ var app = express();
 app.use(express.static('./../public'));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(function(req, res, next) {
 // 	res.header("Access-Control-Allow-Origin", "*");
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // 	next();
 // });
 
-consign({cwd: 'app'})
+consign({ cwd: 'app' })
 	.include('api')
 	.then('routes')
 	.into(app);

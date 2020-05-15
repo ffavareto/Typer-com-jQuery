@@ -1,8 +1,8 @@
 var Datastore = require('nedb')
-    ,dbName = 'data.db'
-    ,db;
+    , dbName = 'data.db'
+    , db;
 
-if(!db) {
+if (!db) {
     db = new Datastore({
         filename: dbName,
         autoload: true
